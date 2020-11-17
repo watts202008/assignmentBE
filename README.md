@@ -10,23 +10,30 @@ Install Apache and PHP
 CodeIgniter runs on Apache web server and written in PHP language, so you will need to install Apache and PHP to your system. First, install Apache web server with the following command:
 
 sudo apt-get install apache2 -y
+----------------------------------
 By default, the latest version of the PHP is not available in Ubuntu 18.04, so you will need to add the repository for that. You can add PHP repository with the following command:
 
 sudo apt-get install python-software-properties -y
+----------------------------------------------------
 sudo add-apt-repository -y ppa:ondrej/php
+----------------------------------------------
 Once the repository is updated, you can install PHP and other libraries with the following command:
 
 sudo apt-get install libapache2-mod-php7.1 php7.1-common php7.1-xml php7.1-zip php7.1-mysql unzip wget -y
 Next, start Apache web service and enable it to start on boot time:`
 
 
- 
 sudo systemctl start apache2
+-------------------------------
 sudo systemctl enable apache2
+--------------------------------
+
 Install CodeIgniter
+
 You can download the latest version of the CodeIgniter from Git repository using the following command:
 
 wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.5.zip
+-----------------------------------------------------------------------
 Once the download is completed, unzip the downloaded file with the following command:
 
 unzip 3.1.5.zip
