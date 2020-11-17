@@ -37,12 +37,17 @@ wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.5.zip
 Once the download is completed, unzip the downloaded file with the following command:
 
 unzip 3.1.5.zip
+---------------
 Copy the extracted directory to the Apache root directory and give proper permissions with the following command:
 
 sudo cp -r CodeIgniter-3.1.5 /var/www/html/rabobank-backend
+---------------------------------------------------------------
 sudo chown -R www-data:www-data /var/www/html/rabobank-backend
+---------------------------------------------------------------
 sudo chmod -R 777 /var/www/html/rabobank-backend/
+-----------------------------------------------------------------
 Next, create an apache virtual host directive for rabobank-backend.
+-------------------------------------------------------------------
 
 
 sudo nano /etc/apache2/sites-available/rabobank-backend.conf
@@ -61,20 +66,23 @@ allow from all
  ErrorLog /var/log/apache2/rabobank-backend-error_log
  CustomLog /var/log/apache2/rabobank-backend-access_log common
 </VirtualHost>
-
+-----------------------------------------------------------------------------
 
 Save and close the file, then enable virtual host file with the following command:
 
 edit host file 
+-------------------------------------
 sudo nano /etc/hosts/
 add 
 
 127.0.1.1       rabobank-backend.com
-
+--------------------------------------
 sudo a2ensite rabobank-backend
+---------------------------------------
 Finally, restart apache service to apply all the changes:
 
 systemctl restart apache2
+---------------------------------
 Access rabobank-backend
 Open your web browser and type the URL http://rabobank-backend.com,
 
