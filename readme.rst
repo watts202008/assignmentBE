@@ -72,3 +72,11 @@ Open your web browser and type the URL http://rabobank-backend.com,
 github
 **************
 checkout the master branch use command to checkout git fetch && git checkout
+
+
+SQL
+************
+
+get updated sql from dbBackup folder and import into mysql and set the user name and password in application/config/database.php
+
+
